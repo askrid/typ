@@ -1,0 +1,8 @@
+/out/
+*.pdf
+*.png
+*.svg
+
+.DS_Store
+
+.typst-cache/
