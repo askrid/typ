@@ -1,14 +1,10 @@
-// Resume — Joonwoo Choi
-// Compile: make out/resume.pdf   (or: typst compile --root . src/resume.typ out/resume.pdf)
-
-#set document(title: "Joonwoo Choi — Resume", author: "Joonwoo Choi")
+#set document(title: "Joonwoo Choi's Resume", author: "Joonwoo Choi")
 #set page(paper: "a4", margin: 0.7in)
 #set text(font: "New Computer Modern", size: 11pt, lang: "en")
 #set par(justify: false, leading: 0.6em)
 
 #show link: set text(fill: blue.darken(30%))
 
-// Section heading: uppercase, bold, with a full-width rule beneath.
 #let section(title) = {
   v(6pt)
   text(size: 1.15em, weight: "bold")[#upper(title)]
@@ -17,7 +13,6 @@
   v(2pt)
 }
 
-// One entry: org on the left, place on the right; then role / dates line.
 #let entry(org, place, role: none, dates: none) = {
   grid(
     columns: (1fr, auto),
@@ -80,12 +75,19 @@ Cumulative GPA: 3.76\/4.3 #h(1em) Major GPA: 3.85\/4.3
 #v(4pt)
 
 #entry(
-  "Mirny", "Seoul, Korea",
+  "Nodeinfra", "Seoul, Korea",
   role: "Software Engineering Intern",
   dates: "Jan 2022 – Mar 2022",
 )
 #bullets(
   [Built a decentralized NFT marketplace (web app and smart contracts) using React and Solidity.],
+)
+
+// ---- Projects ----
+#section("Projects")
+#bullets(
+  [*Deadline-based Linux DRM GPU Scheduler*: Extended the DRM scheduler with an EEVDF-inspired algorithm, improving interactive tail latency.],
+  [*OpenSBI Hypervisor*: Implemented an M-mode trap-and-emulate hypervisor on OpenSBI for xv6 guests running on SiFive FU740-C000.],
 )
 
 // ---- Skills ----
@@ -102,8 +104,6 @@ Cumulative GPA: 3.76\/4.3 #h(1em) Major GPA: 3.85\/4.3
 // ---- Coursework ----
 #section("Coursework")
 Operating Systems (A+), Principle and Practice of Software Development (A+),
-Database (A+), Computer Networks (A0), Artificial Intelligence (A−),
-Natural Language Processing (A0), Computer Graphics (A0), Computer Vision (A0),
-Principles of Programming (A0), Internet Security (A0), Data Structures (A0),
-Algorithms (A0), Logic Design (A0), System Programming (A0),
-Computer Programming (A0)
+Database (A+), Computer Networks (A0), Natural Language Processing (A0),
+Computer Graphics (A0), Computer Vision (A0), Internet Security (A0),
+Algorithms (A0), Logic Design (A0), System Programming (A0)
