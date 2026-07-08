@@ -29,11 +29,6 @@ open: $(OUT_DIR)/$(patsubst $(SRC_DIR)/%.typ,%.pdf,$(F))
 	@test -n "$(F)" || { echo "usage: make open F=src/file.typ"; exit 1; }
 	@open "$(OUT_DIR)/$(patsubst $(SRC_DIR)/%.typ,%.pdf,$(F))"
 
-png:
-	@test -n "$(F)" || { echo "usage: make png F=src/file.typ"; exit 1; }
-	@mkdir -p $(dir $(OUT_DIR)/$(patsubst $(SRC_DIR)/%.typ,%.png,$(F)))
-	$(TYPST) compile $(COMMON) $(F) $(OUT_DIR)/$(patsubst $(SRC_DIR)/%.typ,%.png,$(F))
-
 fmt:
 	@command -v typstfmt >/dev/null 2>&1 || { echo "typstfmt not installed; skipping"; exit 0; }
 	@find $(SRC_DIR) lib templates -name '*.typ' 2>/dev/null | xargs -r typstfmt
