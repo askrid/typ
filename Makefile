@@ -1,4 +1,5 @@
 TYPST      ?= typst
+TYPSTYLE   ?= typstyle
 SRC_DIR    ?= src
 OUT_DIR    ?= out
 FONT_DIR   ?= fonts
@@ -30,8 +31,8 @@ open: $(OUT_DIR)/$(patsubst $(SRC_DIR)/%.typ,%.pdf,$(F))
 	@open "$(OUT_DIR)/$(patsubst $(SRC_DIR)/%.typ,%.pdf,$(F))"
 
 fmt:
-	@command -v typstfmt >/dev/null 2>&1 || { echo "typstfmt not installed; skipping"; exit 0; }
-	@find $(SRC_DIR) lib templates -name '*.typ' 2>/dev/null | xargs -r typstfmt
+	@command -v $(TYPSTYLE) >/dev/null 2>&1 || { echo "typstyle not installed; skipping"; exit 0; }
+	@find $(SRC_DIR) templates -name '*.typ' 2>/dev/null | xargs -r $(TYPSTYLE) --inplace
 
 clean:
 	rm -rf $(OUT_DIR)
