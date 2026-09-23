@@ -95,10 +95,10 @@
     columns: (auto, 1fr),
     row-gutter: 0.45em,
     column-gutter: 0.8em,
-    strong[Programming], [C, Go, Python, C++, TypeScript/JavaScript, Shell, SQL],
+    strong[Programming], [Go, Python, C, C++, TypeScript/JavaScript, Shell, SQL],
     strong[Tools], [GNU/Linux, Git, Vim],
     strong[Frontend], [React, Next.js, Vite, SWR, MUI],
-    strong[Backend], [REST/gRPC APIs, MySQL, Redis, Bigtable, BigQuery, Pub/Sub],
+    strong[Backend], [REST/gRPC APIs, Django, PostgresSQL/MySQL, Redis, Bigtable, BigQuery, Pub/Sub],
     strong[Infrastructure], [GCP, Kubernetes, Docker, Helm, Terraform, Datadog, Sentry],
     strong[Spoken Languages], [Korean (Native), English (Proficient)],
   )
