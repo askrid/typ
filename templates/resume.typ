@@ -1,7 +1,7 @@
 #let render-resume(margin: 0.55in, include-interests: false) = {
   set document(title: "Joonwoo Choi's Resume", author: "Joonwoo Choi")
   set page(paper: "a4", margin: margin)
-  set text(font: "New Computer Modern", size: 10.5pt, lang: "en")
+  set text(font: "New Computer Modern", size: if include-interests { 10pt } else { 10.5pt }, lang: "en")
   set par(justify: false, leading: 0.5em)
 
   show link: set text(fill: blue.darken(30%))
@@ -67,8 +67,10 @@
     [Built internal operations tooling full stack (React/TypeScript, Go) and server libraries handling 5M+ QPS.],
     [Built and owned the company-wide A/B testing framework adopted by most engineering and data science teams as the company's primary system for evaluating product performance.],
     [Drove migration of 10+ services onto a new runtime configuration deployment system across 5K+ production pods.],
+    [Owned infrastructure setup and production operations for my projects, including metrics, monitoring, and daily issue resolution.],
     [Identified and fixed a cache stampede that was overloading the production database.],
     [Cut \$9K/week in cloud spend to near zero after tracing the cost to a misconfigured multi-regional cloud storage.],
+    [Worked closely with engineers across Seoul and Seattle and data scientists across Seoul and Redwood City.],
   )
 
   v(4pt)
