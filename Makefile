@@ -12,13 +12,14 @@ FONT_FLAG := $(if $(wildcard $(FONT_DIR)),--font-path $(FONT_DIR),)
 COMMON    := --root $(ROOT) $(FONT_FLAG) $(TYPST_FLAGS)
 
 SOURCES := $(shell find $(SRC_DIR) -name '*.typ' 2>/dev/null)
+TEMPLATES := $(shell find templates -name '*.typ' 2>/dev/null)
 PDFS    := $(patsubst $(SRC_DIR)/%.typ,$(OUT_DIR)/%.pdf,$(SOURCES))
 
 .PHONY: all watch open png fmt clean list
 
 all: $(PDFS)
 
-$(OUT_DIR)/%.pdf: $(SRC_DIR)/%.typ
+$(OUT_DIR)/%.pdf: $(SRC_DIR)/%.typ $(TEMPLATES) Makefile
 	@mkdir -p $(dir $@)
 	$(TYPST) compile $(COMMON) $< $@
 
