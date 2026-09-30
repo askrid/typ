@@ -1,7 +1,7 @@
-#let render-resume(title: none, author: none, margin: 0.55in, body) = {
+#let render-resume(title: none, author: none, margin: 0.55in, size: 10.5pt, body) = {
   set document(title: title, author: author)
   set page(paper: "a4", margin: margin)
-  set text(font: "New Computer Modern", size: 10.5pt, lang: "en")
+  set text(font: "New Computer Modern", size: size, lang: "en")
   set par(justify: false, leading: 0.5em)
   show link: set text(fill: blue.darken(30%))
   body
