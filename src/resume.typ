@@ -5,7 +5,6 @@
 #show: render-resume.with(
   title: "Joonwoo Choi's Resume",
   author: "Joonwoo Choi",
-  margin: 0.43in,
   size: 10pt,
 )
 
@@ -28,11 +27,9 @@
     dates: "Sep 2026 – Present",
   )
   bullets(
-    [Sole engineer for a platform serving 1,000+ contractors worldwide, owning product decisions and implementation.],
+    [Sole engineer for a platform serving 1,000+ contractors worldwide.],
     [Built queued email delivery with retries, deduplication, and operator tools to diagnose failures and resend emails.],
     [Built an OpenAI-compatible streaming gateway with scoped access and usage tracking.],
-    [Reduced database round trips through PostgreSQL functions, parallelized independent queries, and added indexes.],
-    [Improved navigation with intent-based prefetching and React Suspense.],
   )
 
   v(4pt)
