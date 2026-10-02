@@ -28,8 +28,9 @@
   )
   bullets(
     [Sole engineer for a platform serving 1,000+ contractors worldwide.],
+    [Built an OpenAI-compatible streaming gateway with scoped access and spending limits enforced across concurrent requests.],
+    [Built Stripe and Wise payout flows with idempotent processing and reconciliation to prevent duplicate payments and recover from partial failures.],
     [Built queued email delivery with retries, deduplication, and operator tools to diagnose failures and resend emails.],
-    [Built an OpenAI-compatible streaming gateway with scoped access and usage tracking.],
   )
 
   v(4pt)
