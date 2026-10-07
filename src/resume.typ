@@ -22,7 +22,7 @@
   section("Experience")
   entry(
     "Nitrode",
-    "Remote (San Francisco, California)",
+    "Remote",
     role: "Software Engineer (Contract)",
     dates: "Sep 2026 – Present",
   )
