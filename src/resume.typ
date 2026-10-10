@@ -5,10 +5,13 @@
 #show: render-resume.with(
   title: "Joonwoo Choi's Resume",
   author: "Joonwoo Choi",
+  margin: 0.5in,
   size: 10pt,
 )
 
 #{
+  set par(spacing: 0.9em)
+
   resume-header("Joonwoo Choi", [
     #link("mailto:joonwoo3023@gmail.com")[joonwoo3023\@gmail.com]
     #h(4pt) | #h(4pt)
@@ -27,73 +30,73 @@
     dates: "Sep 2026 – Present",
   )
   bullets(
-    [Sole engineer for a platform serving 1,000+ contractors worldwide.],
-    [Built an OpenAI-compatible streaming gateway with scoped access and spending limits enforced across concurrent requests.],
-    [Built Stripe and Wise payout flows with idempotent processing and reconciliation to prevent duplicate payments and recover from partial failures.],
-    [Built queued email delivery with retries, deduplication, and operator tools to diagnose failures and resend emails.],
+    [Sole engineer responsible for building and running a game-development data platform for AI training and evaluation, serving 1,000+ contractors worldwide.],
+    [Built payout workflows with duplicate-payment safeguards and recovery from partial failures. Implemented a streaming AI gateway enforcing scoped access and spending limits across concurrent requests.],
   )
 
   v(4pt)
   entry(
     "Moloco",
-    "Seoul, Korea",
-    role: "Software Engineer (Full-time)",
+    "Seoul, South Korea",
+    role: "Software Engineer",
     dates: "Mar 2023 – Jul 2025",
   )
   bullets(
-    [Built full-stack internal tools (React/TypeScript, Go) and libraries for services handling 5M+ QPS.],
-    [Built and owned the company-wide A/B testing framework for real-time bidding logic and ML model changes.],
-    [Drove migration of 10+ services onto a new runtime configuration deployment system across 5K+ production pods.],
-    [Owned project infrastructure and production operations, including monitoring and day-to-day troubleshooting.],
-    [Identified and fixed a cache stampede that was overloading the production database.],
-    [Cut cloud storage costs from \$9K/week to near zero by correcting a multi-region storage misconfiguration.],
+    [Designed and implemented a runtime configuration system for 6,000+ globally distributed production pods. Used to apply emergency configuration changes in critical services.],
+    [Built a company-wide A/B testing platform with the data science team, supporting 200+ concurrent experiments on real-time ad bidding and ML models in services handling 5M+ QPS.],
+    [Led the migration of 10+ production services to the standard configuration system, coordinating with 5+ teams across the US and South Korea.],
+    [Diagnosed and fixed production performance and cost issues, eliminating database query spikes caused by cache stampedes and cutting cloud storage costs from \$9,000/week to near zero.],
   )
 
   v(4pt)
   entry(
     "Nodeinfra",
-    "Seoul, Korea",
+    "Seoul, South Korea",
     role: "Software Engineer (Intern)",
     dates: "Jan 2022 – Mar 2022",
   )
   bullets(
-    [Built a decentralized NFT marketplace using React for the web application and Solidity for smart contracts.],
+    [Built a decentralized NFT marketplace with a Solidity smart contract that let buyers purchase fractional ownership of high-value NFTs.],
   )
 
   section("Projects")
   bullets(
-    [#link("https://github.com/askrid/kernel")[*Deadline-based Linux DRM GPU Scheduler*]: Extended the kernel's DRM scheduler with an EEVDF-inspired algorithm to prioritize interactive GPU jobs, reducing tail latency.],
-    [#link("https://github.com/askrid/xv6-riscv-snu-unmatched")[*OpenSBI Hypervisor*]: Implemented an M-mode trap-and-emulate hypervisor on OpenSBI for xv6-riscv guests running on SiFive FU740-C000.],
-    [#link("https://github.com/askrid/multilang-simtrans")[*Language Similarity and Machine Translation Study*]: Built an experiment pipeline to correlate language similarity with translation quality. Fine-tuned NLLB-200 and evaluated 15 language pairs.],
-    [#link("https://github.com/askrid/cago")[*Full Stack Toy Project*]: Built a web application with Next.js and Django REST Framework. Set up containerized infrastructure and CI/CD.],
+    [#link("https://github.com/askrid/kernel")[*Deadline-based Linux DRM GPU Scheduler*]: Implemented an EEVDF-inspired scheduling policy in the Linux DRM GPU scheduler. Reduced interactive p99 latency from 167 ms to 24 ms under oversubscription in synthetic Vulkan benchmarks, while preserving proportional GPU sharing.],
+    [#link("https://github.com/askrid/xv6-riscv-snu-unmatched")[*OpenSBI Hypervisor for xv6-riscv*]: Collaborated with #link("https://csl.snu.ac.kr/")[SNU Systems Software & Architecture Lab] to run xv6-riscv on SiFive FU740-C000. Independently designed and implemented an OpenSBI trap-and-emulate hypervisor, preserving kernel functionality with minimal overhead.],
+    [#link("https://github.com/askrid/multilang-simtrans")[*Language Similarity and Machine Translation Study*]: Built an experiment pipeline to correlate language similarity with translation quality. Fine-tuned NLLB-200 and evaluated 15 language pairs, finding a strong correlation between typological similarity and fine-tuned COMET scores (Spearman ρ ≈ 0.90).],
   )
 
   section("Skills")
   skills(
-    strong[Programming],
-    [Go, Python, C, C++, TypeScript, JavaScript, Shell, SQL],
-    strong[Backend & Data],
-    [Distributed systems, REST/gRPC APIs, PostgreSQL, MySQL, Redis, BigQuery],
-    strong[Infrastructure],
-    [GCP, Kubernetes, Docker, Helm, Terraform, Datadog, Sentry],
-    strong[Frontend],
-    [React, Next.js],
-    strong[Development Tools],
-    [GNU/Linux, Git, Vim],
-    strong[Spoken Languages],
+    strong[Technical],
+    [Go, C, C++, Python, TypeScript, SQL, Linux, GCP, Kubernetes, Docker, Terraform, Datadog, PostgreSQL, MySQL, Redis, BigQuery, React, Next.js],
+    strong[Language],
     [Korean (Native), English (Proficient)],
   )
 
   section("Education")
+  set par(spacing: 6pt, leading: 0.6em)
   entry(
     "Seoul National University",
-    "Seoul, Korea",
-    role: "B.S. in Computer Science and Engineering",
+    "Seoul, South Korea",
+    role: "B.S. in Computer Science and Engineering, cum laude",
     dates: "Mar 2020 – Aug 2026",
   )
   [Cumulative GPA: 3.76\/4.3 #h(1em) Major GPA: 3.85\/4.3]
   parbreak()
-  [Coursework: Operating Systems (A+), Database (A+), Software Engineering (A+),
-    Computer Networks (A0), Algorithms (A0), System Programming (A0),
-    Internet Security (A0), Natural Language Processing (A0)]
+  [Relevant Coursework: Operating Systems (A+), Database (A+), Software Engineering (A+), Algorithms (A0),
+    Computer Architecture (A0), System Programming (A0), Computer Networks (A0), Computer Graphics (A0)]
+  parbreak()
+  [Activities: First violin, #link("https://www.snupo.org/")[Seoul National University Philharmonic Orchestra (SNUPO)].]
+
+  v(12pt)
+  entry(
+    "Sehwa High School",
+    "Seoul, South Korea",
+    role: "High School Diploma",
+    dates: "Mar 2017 – Feb 2020",
+  )
+  [Academic Excellence Award (Highest Honors)]
+  parbreak()
+  [CSAT (2020 admission): Perfect scores in Korean (0.16% of candidates), math (Ga track, 0.58%), and English.]
 }

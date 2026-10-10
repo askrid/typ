@@ -8,11 +8,11 @@
 }
 
 #let section(title) = {
-  v(3pt)
+  v(5pt)
   text(size: 1.15em, weight: "bold")[#upper(title)]
   v(-4pt)
   line(length: 100%, stroke: 0.5pt)
-  v(2pt)
+  v(3pt)
 }
 
 #let entry(org, place, role: none, dates: none) = {
@@ -32,8 +32,14 @@
 }
 
 #let bullets(..items) = {
-  set list(marker: [•], indent: 0pt, body-indent: 0.5em, spacing: 0.45em)
-  for it in items.pos() [- #it]
+  list(
+    marker: [•],
+    indent: 0pt,
+    body-indent: 0.5em,
+    tight: false,
+    spacing: 6pt,
+    ..items.pos(),
+  )
 }
 
 #let resume-header(name, contacts) = align(center)[
