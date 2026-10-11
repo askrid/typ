@@ -84,8 +84,8 @@
   )
   [Cumulative GPA: 3.76\/4.3 #h(1em) Major GPA: 3.85\/4.3]
   parbreak()
-  [Relevant Coursework: Operating Systems (A+), Database (A+), Software Engineering (A+), Algorithms (A0),
-    Computer Architecture (A0), System Programming (A0), Computer Networks (A0), Computer Graphics (A0)]
+  [Relevant Coursework: Operating Systems (A+), Database (A+), Software Engineering (A+), Algorithms (A),
+    Computer Architecture (A), System Programming (A), Computer Networks (A), Computer Graphics (A)]
   parbreak()
   [Activities: First violin, #link("https://www.snupo.org/")[Seoul National University Philharmonic Orchestra (SNUPO)].]
 
